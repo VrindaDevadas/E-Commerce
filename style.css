@@ -18,7 +18,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* New styles for the main navigation container */
+
 .main-nav {
     background-color: #000;
     display: flex;
@@ -35,14 +35,13 @@ body {
     letter-spacing: 1px;
 }
 
-/* Removed background and alignment from .navigation */
+
 .navigation ul {
     display: flex;
     list-style-type: none;
     gap: 30px;
 }
 
-/* Combined link styles for easier maintenance */
 .main-nav a {
     color: #fff;
     text-decoration: none;
@@ -53,7 +52,7 @@ body {
     opacity: 0.7;
 }
 
-/* Specific styles for the navigation links */
+
 .navigation a {
     text-transform: uppercase;
     font-size: 14px;
@@ -61,14 +60,52 @@ body {
     letter-spacing: 1.5px;
 }
 
-/* New container for icons to group them */
+
 .header-icons {
     display: flex;
     gap: 25px;
-    /* Adjust spacing between icons */
 }
 
 .header-icons a {
     font-size: 16px;
-    /* Adjust icon size */
+}
+
+.hero-section {
+    background-image: url('public/cover.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px;
+}
+
+.hero-content {
+    max-width: 500px;
+    color: rgb(38, 38, 38);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content .sub-heading {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.hero-content .description {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.shop-now-btn {
+    display: inline block;
+    padding: 11px 17px;
+    border-radius: 20px;
+    background-color: #262626;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
