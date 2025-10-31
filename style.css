@@ -90,12 +90,12 @@ body {
 
 .hero-content .sub-heading {
     font-size: 14px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .hero-content .description {
     font-size: 16px;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
 .shop-now-btn {
@@ -189,7 +189,7 @@ body {
     background-color: #c5c4c4;
     border-radius: 8px;
     color: #2f3032;
-    font-size: 1rem;
+    font-size: 12px;
     font-weight: 500;
     padding: 4px 10px;
 }
