@@ -6,11 +6,11 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff;
+    background-color: #faeaf7;
 }
 
 .announcement {
-    background-color: #f2dbee;
+    background-color: #faeaf7;
     color: #333;
     text-align: center;
     padding: 8px 15px;
@@ -239,15 +239,15 @@ body {
     width: 100%;
 }
 
-/* .shop-feed-section {
-    padding: 50px 40px;
+.shop-feed-section {
+    padding: 30px 1px;
     margin: auto;
     max-width: 1400px;
-    background-color: #f2dbee;
+    background-color: #faeaf7;
 }
 
 .feed-header {
-    border: 1px solid #dcdcdc;
+    border: 1px #dcdcdc;
     border-bottom: none;
     padding: 20px 5px;
     border-radius: 12px 12px 0 0;
@@ -282,8 +282,98 @@ body {
 }
 
 .large-item {
-    grid-column: 1/3;    /*will start at col 1 and end at col 3 
-    
-    grid-row: 1/3    /* will start at row 1 and end at row 3
-        
-} */
+    grid-column: 1/3;
+    /*will start at col 1 and end at col 3  */
+
+    grid-row: 1/3
+        /* will start at row 1 and end at row 3 */
+
+}
+
+.feature-container {
+    max-width: 1400px;
+    height: 70px;
+    border-radius: 10px;
+    display: flex;
+    background-color: #fefefe;
+    padding: 10px 1px;
+    margin: 10px auto;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-evenly;
+}
+
+.feature-item ul {
+    display: flex;
+    align-items: center;
+    gap: 6.2rem;
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-size: 1.3rem;
+    animation: scrollAnimation 30s linear infinite;
+
+}
+
+.feature-item span {
+    margin-left: 6px;
+}
+
+
+@keyframes scrollAnimation {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+        /*half the width of conatiner items  to left */
+    }
+}
+
+.feature-container:hover .feature-item {
+    animation-play-state: paused;
+}
+
+.grid {
+    padding: 20px 20px;
+
+}
+
+.grid-1 {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px 42px;
+
+}
+
+.grid-1 .logo a {
+    color: #252525;
+
+}
+
+.grid-1 h4 {
+    margin-top: 30px;
+}
+
+.grid-1 .subscribe-form-container {
+    margin-top: 20px;
+
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 20%;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #252525;
+    color: white;
+}
+
+button:hover {
+    background-color: #414141;
+}
