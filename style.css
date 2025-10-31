@@ -240,9 +240,9 @@ body {
 }
 
 .shop-feed-section {
-    padding: 30px 1px;
+    padding: 10px;
     margin: auto;
-    max-width: 1400px;
+    max-width: 1500px;
     background-color: #faeaf7;
 }
 
@@ -291,8 +291,8 @@ body {
 }
 
 .feature-container {
-    max-width: 1400px;
-    height: 70px;
+    max-width: 1480px;
+    height: 90px;
     border-radius: 10px;
     display: flex;
     background-color: #fefefe;
@@ -336,27 +336,20 @@ body {
 }
 
 .grid {
-    padding: 20px 20px;
-
+    padding: 25px;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    display: flex;
+    gap: 20rem;
 }
 
-.grid-1 {
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 25px 42px;
 
-}
-
-.grid-1 .logo a {
+.logo a {
     color: #252525;
 
 }
 
-.grid-1 h4 {
-    margin-top: 30px;
-}
 
-.grid-1 .subscribe-form-container {
+.subscribe-form-container {
     margin-top: 20px;
 
 }
@@ -364,7 +357,7 @@ body {
 input {
     padding: 10px;
     border-radius: 10px;
-    width: 20%;
+    width: 76%;
 }
 
 button {
@@ -376,4 +369,28 @@ button {
 
 button:hover {
     background-color: #414141;
+}
+
+footer h4 {
+    margin-top: 30px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #475569;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #000;
 }
