@@ -327,12 +327,37 @@ body {
 
     to {
         transform: translateX(-50%);
-        /*half the width of conatiner items  to left */
     }
 }
 
 .feature-container:hover .feature-item {
     animation-play-state: paused;
+}
+
+.shop-hero {
+    background-image: url('public/shop.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 90px 70px;
+    display: flex;
+    align-items: center;
+
+}
+
+.shop-content {
+    color: #f4f6f7;
+}
+
+.shop-content ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    margin-top: 15px;
+
+    a {
+        text-decoration: none;
+        color: #e9ecef;
+    }
 }
 
 .grid {
