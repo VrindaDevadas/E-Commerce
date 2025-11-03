@@ -147,10 +147,11 @@ body {
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    /* Enables horizontal scrolling */
+    /* horizontal scrolling */
     padding-bottom: 20px;
+    margin-top: 20px;
     width: 100%;
-    /* Ensures the carousel takes the full width */
+    /*carousel takes the full width */
     scrollbar-width: none;
 
 }
