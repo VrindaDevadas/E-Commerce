@@ -1,6 +1,6 @@
 function createProductCard(product) {
 
-    return `<a href="product.html?id=${product.id} class=product-card-link>
+    return `<a href="product.html?id=${product.id} class="product-card-link">
        <div class="product-card">
                ${product.badge ? `
                 <div class="badge-container">
@@ -21,7 +21,7 @@ function createProductCard(product) {
                         <span>${product.rating}</span>
                     </div>
                 </div>
-                <button class="add-to-bag-btn">ADD TO BAG </button>
+                <button class="add-to-bag-btn">ADD TO CART </button>
 
             </div>
 
