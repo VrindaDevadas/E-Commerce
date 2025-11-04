@@ -30,6 +30,26 @@ const products = [
         description: 'Begin your journey to healthier skin with our complete starter set. Includes a free gift with purchase!'
     },
     {
+        id: 3,
+        name: 'Skincare Starter Set',
+        image: 'public/img3.png',
+        price: 1300,
+        rating: 4.9,
+        badge: 'free gift',
+        category: 'bestseller',
+        description: 'Begin your journey to healthier skin with our complete starter set. Includes a free gift with purchase!'
+    },
+    {
+        id: 3,
+        name: 'Skincare Starter Set',
+        image: 'public/img3.png',
+        price: 1300,
+        rating: 4.9,
+        badge: 'free gift',
+        category: 'bestseller',
+        description: 'Begin your journey to healthier skin with our complete starter set. Includes a free gift with purchase!'
+    },
+    {
         id: 4,
         name: 'Natural Glow Collection',
         image: 'public/img4.png',
@@ -39,5 +59,27 @@ const products = [
         category: 'combo',
         description: 'Achieve that perfect, natural "no-makeup" makeup look with these essentials for a radiant complexion.'
     },
+    {
+        id: 4,
+        name: 'Natural Glow Collection',
+        image: 'public/img4.png',
+        price: 1119,
+        rating: 4.5,
+        badge: '10% off',
+        category: 'combo',
+        description: 'Achieve that perfect, natural "no-makeup" makeup look with these essentials for a radiant complexion.'
+    },
+    {
+        id: 4,
+        name: 'Natural Glow Collection',
+        image: 'public/img4.png',
+        price: 1119,
+        rating: 4.5,
+        badge: '10% off',
+        category: 'combo',
+        description: 'Achieve that perfect, natural "no-makeup" makeup look with these essentials for a radiant complexion.'
+    },
+
+
 
 ];
