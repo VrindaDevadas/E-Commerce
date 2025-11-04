@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class="fa-solid fa-star"></i><span>${product.rating}</span>
                 </div>
             </div>
-            <button class="add-to-cart-btn">ADD TO CART</button>
+            <button class="add-to-bag-btn">ADD TO CART</button>
             <div class="description-accordion">
                  <h4>DESCRIPTION</h4>
                  <p>${product.description}</p>

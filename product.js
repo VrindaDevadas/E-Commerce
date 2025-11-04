@@ -1,17 +1,14 @@
 function createProductCard(product) {
-
-    return `<a href="product.html?id=${product.id} class="product-card-link">
-       <div class="product-card">
-               ${product.badge ? `
-                <div class="badge-container">
-                    <span class="badge">10% off</span>
-                </div>` : ' '}
+    return `
+        <div class="product-card">
+            <a href="product.html?id=${product.id}" class="product-image-container">
+                ${product.badge ? `<span class="badge">${product.badge}</span>` : ''}
                 <img src="${product.image}" alt="${product.name}">
-                <div class="product-info">
-                    <h3>${product.name}</h3>
-                </div>
-                <div class="price-rating">
-                    <span class="price"> ${product.price}</span>
+            </a>
+            <div class="product-info-container">
+                <a href="product.html?id=${product.id}" class="product-title">${product.name}</a>
+                <div class="product-meta">
+                    <a href="product.html?id=${product.id}" class="product-price">&#8377;${product.price}</a>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -21,10 +18,8 @@ function createProductCard(product) {
                         <span>${product.rating}</span>
                     </div>
                 </div>
-                <button class="add-to-bag-btn">ADD TO CART </button>
-
+                <button class="add-to-cart-btn">ADD TO CART</button>
             </div>
-
-        </a> ` ;
-
+        </div>
+    `;
 }
