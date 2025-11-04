@@ -400,12 +400,6 @@ body {
 
 }
 
-.shop-content h1 {
-    color: #fff;
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
 .shop-content {
     color: #f4f6f7;
 }
@@ -416,18 +410,18 @@ body {
     gap: 40px;
     margin-top: 15px;
 
+    a {
+        text-decoration: none;
+        color: #e9ecef;
+    }
 }
 
-.shop-content ul a {
-    text-decoration: none;
-    color: #fff;
+.grid {
+    padding: 25px;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    display: flex;
+    gap: 20rem;
 }
-
-.shop-content ul a:hover {
-    color: #a5a5a5;
-}
-
-
 
 
 footer .logo a {
