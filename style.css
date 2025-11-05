@@ -98,6 +98,13 @@ body {
     margin-bottom: 18px;
 }
 
+#search-bar {
+    position: absolute;
+    width: 20%;
+    top: 6.5%;
+    right: 10%;
+}
+
 .shop-now-btn {
     display: inline block;
     padding: 11px 17px;

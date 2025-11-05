@@ -1,6 +1,6 @@
 function createProductCard(product) {
     return `
-        <div class="product-card">
+        <div class="product-card" data-product-id="${product.id}">
             <a href="product.html?id=${product.id}" class="product-image-container">
                 ${product.badge ? `<span class="badge">${product.badge}</span>` : ''}
                 <img src="${product.image}" alt="${product.name}">

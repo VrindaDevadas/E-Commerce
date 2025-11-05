@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
-    const productId = parseInt(params.get('id'));
+    const productId = parseInt(params.get('id'));       //gets id in string and converts into number
 
-    const product = products.find(p => p.id === productId);
-    const container = document.querySelector('.product-page-container');
+    const product = products.find(p => p.id === productId);        //finds the correct product    //find() loops through every product in array
+    const container = document.querySelector('.product-page-container');       //finds container to put html
 
     if (!product) {
         container.innerHTML = '<h1>Product Not Found</h1>';
@@ -26,12 +26,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class="fa-solid fa-star"></i><span>${product.rating}</span>
                 </div>
             </div>
-            <button class="add-to-bag-btn">ADD TO CART</button>
+            <button class="add-to-bag-btn-product-pages">ADD TO CART</button>
             <div class="description-accordion">
                  <h4>DESCRIPTION</h4>
                  <p>${product.description}</p>
             </div>
         </div>
     </section>
+
     `;
+
+
+    //adding an event listener to trigger the add to cart button functionality
+
+    container.querySelector('.product-page').dataset.productId = product.id;
+
+    document.querySelector('.add-to-bag-btn-product-page').addEventListener('click', () => {
+        if (typeof addToCart === 'function') {
+            addToCart(product);
+        } else {
+            alert('${product.name}added to cart!');
+        }
+    })
 });

@@ -30,7 +30,11 @@
             </nav>
 
             <div class="header-icons">
-                <a href="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="search"><i class="fa-solid fa-magnifying-glass">
+                        <!-- <div>
+                            <input type="search" id="search-bar" placeholder="Search....">
+                        </div> -->
+                    </i></a>
                 <a href="user"><i class="fa-solid fa-user"></i></a>
                 <a href="bag"><i class="fa-solid fa-bag-shopping"></i></a>
             </div>
@@ -94,6 +98,18 @@
             </ul>
         </div>
     </div>
+
+    <div class="cart-overlay" id="cart-overlay"></div> <!--  transparent overlay to cover the page -->
+
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>My Bag<span>[2]</span></h3>
+            <button class="close-cart-button" id="close-cart-button">&times;</button>
+        </div>
+
+        <div class="cart-items-contianer">
+        </div>
+    </aside>
 
 
     <footer>
