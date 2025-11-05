@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     bagIcon.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.preventDefault();          // Prevents the browser from following the link's href="#" or navigate to a new page
         openCart();
     });
 
@@ -39,10 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     cartOverlay.addEventListener('click', closeCart);
 
 
-    document.body.addEventListener('click', function (event) {
-        if (event.target.classList.contains('add-to-cart-btn')) {
-            const productCard = event.target.closest('.product-card');
+    document.body.addEventListener('click', function (event) {    //adds a product to a cart
+        if (event.target.classList.contains('add-to-cart-btn')) {    //check if clicked item has the class
+            const productCard = event.target.closest('.product-card');             // Find the closest parent '.product-card' element
             const productId = parseInt(productCard.dataset.productId);
+            //fetch id in str from array and convert
             const product = products.find(p => p.id === productId);
 
             if (product) {
@@ -53,27 +54,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addToCart(product) {
         const existingItem = cart.find(item => item.id === product.id);
-        if (existingItem) {
+        if (existingItem) {                //if items already there quantity is inc
             existingItem.quantity++;
         } else {
-            cart.push({ ...product, quantity: 1 });
+            cart.push({ ...product, quantity: 1 });     //if not qtn 1
         }
-        renderCart();
-        openCart();
+        renderCart();  //update cart html to show changes
+        openCart();   //to show product is added
     }
 
 
     function renderCart() {
-        const cartItemsContainer = document.querySelector('.cart-items-contianer');
+        const cartItemsContainer = document.querySelector('.cart-items-container');
         const cartHeader = document.querySelector('.cart-header h3 span');
 
-        if (cart.length === 0) {
+        if (cart.length === 0) {       //checks if cart is empty and upates header
             cartItemsContainer.innerHTML = '<p>Your bag is empty.</p>';
             cartHeader.textContent = '[0]';
             return;
         }
 
-        cartItemsContainer.innerHTML = cart.map(item => `
+        //html for each item in cart
+        cartItemsContainer.innerHTML = cart.map(item => `                  
             <div class="cart-item">
                 <img src="${item.image}" alt="${item.name}">
                 <div class="cart-item-info">
@@ -89,29 +91,29 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);    //will calc total items to updte header
         cartHeader.textContent = `[${totalItems}]`;
     }
 
 
 
-    document.querySelector('.cart-items-contianer').addEventListener('click', (event) => {
-        if (event.target.classList.contains('quantity-change')) {
+    document.querySelector('.cart-items-container').addEventListener('click', (event) => {
+        if (event.target.classList.contains('quantity-change')) {          //when qnt change btn is clicked 
             const productId = parseInt(event.target.dataset.id);
             const change = parseInt(event.target.dataset.change);
             updateQuantity(productId, change);
         }
 
-        if (event.target.classList.contains('remove-item')) {
-            const productId = parseInt(event.target.dataset.id);
-            removeFromCart(productId);
+        if (event.target.classList.contains('remove-item')) {   //to remove the item
+            const productId = parseInt(event.target.dataset.id);    //fetch prod id
+            removeFromCart(productId);            //item removed
         }
     });
 
     function updateQuantity(productId, change) {
         const item = cart.find(item => item.id === productId);
         if (item) {
-            item.quantity += change;
+            item.quantity += change;            //here the quantity is changes
             if (item.quantity <= 0) {
                 removeFromCart(productId);
             } else {
@@ -121,8 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function removeFromCart(productId) {
-        cart = cart.filter(item => item.id !== productId);
-        renderCart();
+        cart = cart.filter(item => item.id !== productId);       //new cart array excluding item removed
+        renderCart();         //update display
     }
 });
 
