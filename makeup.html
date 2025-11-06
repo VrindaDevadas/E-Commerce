@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saffron</title>
+    <title>Shop - Saffron</title>
+
     <link href="style.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
+
 
     <header>
         <div class="announcement">
@@ -18,7 +21,6 @@
 
         <div class="main-nav">
             <div class="logo">
-
                 <a href="index.html">saffron</a>
             </div>
 
@@ -26,8 +28,8 @@
                 <ul>
 
                     <li><a href="shop.html">Shop</a></li>
-                    <li><a href="/Skincare">Skincare</a></li>
-                    <li><a href="/Makeup">Makeup</a></li>
+                    <li><a href="skincare.html">Skincare</a></li>
+                    <li><a href="makeup.html">Makeup</a></li>
                     <li><a href="/OurStory">Our Story</a></li>
                 </ul>
             </nav>
@@ -43,8 +45,59 @@
         </div>
     </header>
 
-    <main class="product-page-container">
 
+
+    <main>
+        <section class="shop-hero">
+            <div class="shop-content">
+                <h1>Explore Your Options!</h1>
+                <nav class="shop-subnav">
+                    <ul>
+                        <li><a href="#Bestsellers">BestSellers</a></li>
+                        <li><a href="#Lips">Lips</a></li>
+                        <li><a href="#Eyes">Eyes</a></li>
+                        <li><a href="#Sets">Sets</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+
+
+        <section class="explore-section" id="Bestsellers">
+            <div class="subheading">
+                <h2 class="explore"> BestSellers </h2>
+            </div>
+
+            <div class="product-carousel" id="bestsellers-carousel"></div>
+
+
+        </section>
+
+
+        <section class="explore-section" id="Lips">
+            <div class="subheading">
+                <h2 class="explore"> Lips</h2>
+            </div>
+
+            <div class="product-carousel" id="lips-carousel"> </div>
+        </section>
+
+        <section class="explore-section" id="Eyes">
+            <div class="subheading">
+                <h2 class="explore">Eyes</h2>
+            </div>
+
+            <div class="product-carousel" id="eyes-carousel"> </div>
+        </section>
+
+        <section class="explore-section" id="Sets">
+            <div class="subheading">
+                <h2 class="explore"> Sets</h2>
+            </div>
+
+            <div class="product-carousel" id="sets-carousel"> </div>
+        </section>
     </main>
 
 
@@ -83,14 +136,13 @@
                 </ul>
             </div>
 
-
     </footer>
-
 
     <script src="data.js"></script>
     <script src="cart.js"></script>
+    <script src="product.js"></script>
     <script src="main.js"></script>
-    <script src="product-loader.js"></script>
+    <script src="shop-loader.js"></script>
 
 </body>
 

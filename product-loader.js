@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.title = `${product.name} - Saffron`;
     container.innerHTML = `
-    <section class="product-page">
+    <section class="product-page" data-product-id="${product.id}">
         <div class="product-gallery">
             <img src="${product.image}" alt="${product.name}">
         </div>
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <i class="fa-solid fa-star"></i><span>${product.rating}</span>
                 </div>
             </div>
-            <button class="add-to-bag-btn-product-pages">ADD TO CART</button>
+            <button class="add-to-bag-btn">ADD TO CART</button>
             <div class="description-accordion">
                  <h4>DESCRIPTION</h4>
                  <p>${product.description}</p>
@@ -37,15 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
 
-    //adding an event listener to trigger the add to cart button functionality
 
-    container.querySelector('.product-page').dataset.productId = product.id;
 
-    document.querySelector('.add-to-bag-btn-product-page').addEventListener('click', () => {
-        if (typeof addToCart === 'function') {
-            addToCart(product);
-        } else {
-            alert('${product.name}added to cart!');
-        }
-    })
 });

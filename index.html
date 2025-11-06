@@ -23,8 +23,8 @@
             <nav class="navigation">
                 <ul>
                     <li><a href="shop.html">Shop</a></li>
-                    <li><a href="/Skincare">Skincare</a></li>
-                    <li><a href="/Makeup">Makeup</a></li>
+                    <li><a href="skincare.html">Skincare</a></li>
+                    <li><a href="makeup.html">Makeup</a></li>
                     <li><a href="/OurStory">Our Story</a></li>
                 </ul>
             </nav>
@@ -36,7 +36,10 @@
                         </div> -->
                     </i></a>
                 <a href="user"><i class="fa-solid fa-user"></i></a>
-                <a href="bag"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="bag" id="cart-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-notification-badge" class="cart-notification-badge"></span>
+                </a>
             </div>
         </div>
     </header>
@@ -150,6 +153,7 @@
     </footer>
 
     <script src="data.js"></script>
+    <script src="cart.js"></script>
     <script src="product.js"></script>
     <script src="main.js"></script>
 
